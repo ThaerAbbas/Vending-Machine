@@ -19,7 +19,7 @@ namespace Test
             Machine machine = new Machine();
             int value = 100;
             machine.InsertMoney(false, value.ToString());
-            machine.ExecutePurchase(new Drink ("cola", 20));
+            machine.ExecutePurchase(new Drink ("cola", 20, ""));
             Assert.Equal(80, machine.kronorpool);
         }
 

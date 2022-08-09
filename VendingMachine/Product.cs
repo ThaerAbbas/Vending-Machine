@@ -14,10 +14,11 @@ namespace VendingMachine
            
         }
 
-        public Product(string name, int price)
+        public Product(string name, int price,string description)
         {
             Name = name;
             Price = price;
+            Description = description;
             _index++;
             Id = _index;
             _newX = x;
@@ -28,6 +29,8 @@ namespace VendingMachine
      
    
         public int Price { get; set; }
+
+        public string Description { get; set; } 
         public int Id { get; set; }
         public int[] x { get; set; }
 

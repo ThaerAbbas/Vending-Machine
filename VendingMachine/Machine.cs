@@ -40,23 +40,23 @@ namespace VendingMachine
         {
 
 
-            Snack snack = new Snack("Hotdog",40);
+            Snack snack = new Snack("Hotdog",40, "Red juicy hotdogs");
             products.Add(snack);
-            snack = new Snack("Cookies",18);
+            snack = new Snack("Cookies",18, "high fat low protien");
             products.Add(snack);
           
 
-            Drink drink = new Drink("cola",22);
+            Drink drink = new Drink("cola",22, "Zero sugar");
             products.Add(drink);
-            drink = new Drink("Kings County Distillery Straight Bourbon Whiskey",1000);
+            drink = new Drink("Kings County Distillery Straight Bourbon Whiskey",1000, "Strong 45% alc");
             products.Add(drink);
-            drink = new Drink("Casamigos Blanco.Tequila",420);
+            drink = new Drink("Casamigos Blanco.Tequila",420, "papaya, guava, and vanilla");
             products.Add(drink);
 
 
-            Candy candy = new Candy("Chocolate-Bar",40);
+            Candy candy = new Candy("Chocolate-Bar",40, "high proten low fat ");
             products.Add(candy);
-            candy = new Candy("Bag of Chips",18);
+            candy = new Candy("Bag of Chips",18, "salt");
             products.Add(candy);
 
         }
@@ -151,7 +151,8 @@ namespace VendingMachine
                     {
                         ExecutePurchase(product);
                         Console.WriteLine($"now is {kronorpool} kr");
-                       
+                        product.Examine(product);
+                        product.Use(product);
                         break;
                     }
                      else  
